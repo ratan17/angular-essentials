@@ -1,1 +1,4 @@
-<p>user works!</p>
+<div>
+  <button (click)="randomUser()" >
+  <img [src]="userPicPathSignal()" [alt]="userNameSignal()" /> <span> {{userNameSignal()}} </span></button>
+</div>
