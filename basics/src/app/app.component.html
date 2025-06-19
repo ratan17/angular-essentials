@@ -1,7 +1,29 @@
-  <app-header></app-header>
-  <main>
-
+<app-header></app-header>
+<main>
   <div id="users">
-    <app-user></app-user>
+    <app-user
+      [userName]="users_list[0].name"
+      [userImg]="users_list[0].avatar"
+    ></app-user>
+    <app-user
+      [userName]="users_list[1].name"
+      [userImg]="users_list[1].avatar"
+    ></app-user>
+    <app-user
+      [userName]="users_list[2].name"
+      [userImg]="users_list[2].avatar"
+    ></app-user>
+    <app-user
+      [userName]="users_list[3].name"
+      [userImg]="users_list[3].avatar"
+    ></app-user>
+    <app-user
+      [userName]="users_list[4].name"
+      [userImg]="users_list[4].avatar"
+    ></app-user>
+    <app-user
+      [userName]="users_list[5].name"
+      [userImg]="users_list[5].avatar"
+    ></app-user>
   </div>
 </main>
