@@ -9,8 +9,8 @@ import { CommonModule } from '@angular/common';
   styleUrl: './user.component.scss',
 })
 export class UserComponent {
-  @Input() userName!: string;
-  @Input() userImg!: string;
+  @Input({required: true}) userName!: string;
+  @Input({required: true}) userImg!: string;
 
   constructor() {
     // You can perform any initialization logic here if needed
