@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, computed, Input, input } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
 @Component({
@@ -9,8 +9,16 @@ import { CommonModule } from '@angular/common';
   styleUrl: './user.component.scss',
 })
 export class UserComponent {
-  @Input({required: true}) userName!: string;
-  @Input({required: true}) userImg!: string;
+  // @Input({required: true}) userName!: string;
+  // @Input({required: true}) userImg!: string;
+
+  //using input signals
+  userNameInputSignal = input.required<string>();
+  userImgInputSignal = input.required<string>();
+
+  userPicPathSignal = computed(() => {
+    return '../assets/users/' + this.userImgInputSignal();
+  });
 
   constructor() {
     // You can perform any initialization logic here if needed
@@ -21,9 +29,9 @@ export class UserComponent {
     // console.log('UserComponent initialized with users:', this.selectedUser);
   }
 
-  get userPicpath() {
-    return '../assets/users/' + this.userImg;
-  }
+  // get userPicpath() {
+  //   return '../assets/users/' + this.userImg;
+  // }
 
   randomUser() {
     // this.selectedUser = Math.floor(Math.random() * this.users.length);

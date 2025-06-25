@@ -1,6 +1,14 @@
-<div>
+<!-- <div>
   <button (click)="randomUser()">
     <img [src]="userPicpath" [alt]="userName" />
     <span> {{ userName }} </span>
+  </button>
+</div> -->
+
+<!-- #####INPUT SIGNAL######  -->
+<div>
+  <button (click)="randomUser()">
+    <img [src]="userPicPathSignal()" [alt]="userNameInputSignal()" />
+    <span> {{ userNameInputSignal() }} </span>
   </button>
 </div>
